@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     sequence = sequence.splitlines()[-1].strip()
 
-    bases = {
+    amino_acids = {
         "A": 0,
         "R": 1,
         "N": 2,
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     notes = []
 
-    for note in [bases[base] for base in sequence]:
+    for note in [amino_acids[amino_acid] for amino_acid in sequence]:
         notes += [pyknon.music.Note(note)]
 
     midi = pyknon.genmidi.Midi()

@@ -38,7 +38,7 @@ masses = sklearn.preprocessing.normalize(masses, axis=0)
 scales = sklearn.preprocessing.normalize(scales, axis=0)
 
 scales = numpy.absolute(scales)
-scales = sklearn.preprocessing.minmax_scale(scales, feature_range=(0, 100), axis=0)
+scales = sklearn.preprocessing.minmax_scale(scales, feature_range=(50, 100), axis=0)
 scales = numpy.int16(scales)
 
 masses = masses.ravel()
